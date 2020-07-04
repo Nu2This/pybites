@@ -8,4 +8,15 @@ def print_colors():
        - if the color is not in VALID_COLORS, print 'Not a valid color' and continue.
        - otherwise print the color in lower case."""
     while True:
+        color = input('Enter a color: ')
+        if color == 'quit':
+            print('bye')
+            break
+        if color in VALID_COLORS:
+            print(color)
+        else:
+            print('Not a valid color')
         pass
+
+if __name__ == "__main__":
+    print_colors()
