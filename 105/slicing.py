@@ -15,6 +15,13 @@ and now you know about slicing from the end as well :)
 keep enjoying our bites!
 """
 
+another_text = """Take the block of text provided and strip() off the whitespace at the ends.
+Split the whole block up by newline (\n).
+ if the first character is lowercase, split it into words and add the last word
+of that line to the results list.
+Strip the trailing dot (.) and exclamation mark (!) from the word first.
+  finally return the results list!
+"""
 
 def slice_and_dice(text: str = text) -> list:
     """Get a list of words from the passed in text.
@@ -22,10 +29,10 @@ def slice_and_dice(text: str = text) -> list:
     results = []
     lines = text.split('\n')
     for item in lines:
-        item.lstrip()
+        piss=item.lstrip()
         if item == '':
-          pass 
-        elif item[0].islower():
+            pass
+        elif piss[0].islower():
             split = item.split(' ')
             for elem in split[-1:]:
                 print(elem)
@@ -38,4 +45,5 @@ def slice_and_dice(text: str = text) -> list:
     return results
 
 if __name__ == '__main__':
-    slice_and_dice(text)
+    #slice_and_dice(text)
+    slice_and_dice(another_text)
