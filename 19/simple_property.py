@@ -20,6 +20,9 @@ class Promo:
 
     @property
     def expired(self):
+        print('--- expired prop ---')
+        self._expired = bool(NOW > self.date)
+        print(self._expired)
         return self._expired
 
     @expired.setter
@@ -45,5 +48,5 @@ if __name__ == '__main__':
     twitter_promo = Promo('twitter', past_time)
     newsletter_promo = Promo('newsletter', future_date)
     assert twitter_promo.expired
-    assert newsletter_promo.expired
+    assert not newsletter_promo.expired
 
