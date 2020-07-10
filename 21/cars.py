@@ -32,7 +32,7 @@ def get_first_model_each_manufacturer(cars=cars):
     return out
 
 
-def get_all_matching_models(cars=cars, grep='CO'):
+def get_all_matching_models(cars=cars, grep='trail'):
     """return a list of all models containing the case insensitive
        'grep' string which defaults to 'trail' for this exercise,
        sort the resulting sequence alphabetically"""
@@ -41,21 +41,28 @@ def get_all_matching_models(cars=cars, grep='CO'):
 
     for k, v in cars.items():
         for model in v:
-            result = prog.match(model)
+            result = prog.search(model)
             print('result: ' + str(result))
             if result != None:
                 out.append(model)
 
-    print(out)
-    return out
+    print(sorted(out))
+    return sorted(out)
 
 
 def sort_car_models(cars=cars):
     """return a copy of the cars dict with the car models (values)
        sorted alphabetically"""
-    pass
+
+    out_cars = {}
+    for k, v in cars.items():
+        print(f'Key: {k}\n Value: {v}')
+        out_cars.update({k: sorted(v)})
+    print(out_cars)
+    return out_cars
 
 if __name__ == '__main__':
 #    get_all_jeeps(cars)
 #    get_first_model_each_manufacturer(cars)
-    get_all_matching_models(cars)
+#    get_all_matching_models(cars)
+    sort_car_models(cars)
