@@ -1,5 +1,5 @@
 def fizzbuzz(num):
-    for x in range(num + 1):
+    for x in range(num):
         if x % 3 == 0:
             return 'Fizz'
         if x % 5 == 0:
