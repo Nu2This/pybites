@@ -1,12 +1,13 @@
 def fizzbuzz(num):
-    for x in range(num + 1):
-        print(x)
-        if x % 3 == 0:
+        if num % 3 == 0:
             print('Fizz')
-        if x % 5 == 0:
+            return str('Fizz')
+        if num % 5 == 0:
             print('Buzz')
+            return str('Buzz')
         else:
-            print(x)
+            print(num)
+            return int(num)
 
 if __name__ == '__main__':
     fizzbuzz(20)
