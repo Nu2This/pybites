@@ -1,4 +1,6 @@
 def fizzbuzz(num):
+        if num % 3 == 0 and num % 5 ==0:
+            return str('Fizz Buzz')
         if num % 3 == 0:
             print('Fizz')
             return str('Fizz')
