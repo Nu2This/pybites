@@ -1,4 +1,4 @@
-def get_profile(name = 'julian', profession = 'programmer'):
+def get_profile(*, name = 'julian', profession = 'programmer'):
     try:
         out = str(name + ' is a ' + profession)
 
