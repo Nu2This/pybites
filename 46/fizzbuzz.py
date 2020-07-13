@@ -1,8 +1,8 @@
-def fizzbuzz(num):
+def fizzbuzz(num, ret):
     for x in range(num):
-        if x % 3 == 0:
+        if x % ret == 0:
             return 'Fizz'
-        if x % 5 == 0:
+        if x % ret == 0:
             return 'Buzz'
         else:
             return x
